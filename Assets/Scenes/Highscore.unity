@@ -322,6 +322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+  text: {fileID: 1753872361}
 --- !u!4 &493559100
 Transform:
   m_ObjectHideFlags: 0
@@ -468,6 +469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreAmount: 1
+  ScoreManager: {fileID: 0}
 --- !u!135 &767254250
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -579,6 +581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreAmount: 1
+  ScoreManager: {fileID: 0}
 --- !u!135 &844721060
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -783,7 +786,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d70d444137716ff42b40e06bf0bfd4cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScoreAmount: 1
+  ScoreAmount: 2
+  ScoreManager: {fileID: 0}
 --- !u!135 &1178614249
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -894,7 +898,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d70d444137716ff42b40e06bf0bfd4cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScoreAmount: 1
+  ScoreAmount: 2
+  ScoreManager: {fileID: 493559099}
 --- !u!135 &1374687825
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1006,6 +1011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreAmount: 1
+  ScoreManager: {fileID: 0}
 --- !u!135 &1399256896
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1143,7 +1149,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Highscore
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1177,8 +1183,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1246,8 +1252,6 @@ GameObject:
   - component: {fileID: 1838093634}
   - component: {fileID: 1838093633}
   - component: {fileID: 1838093632}
-  - component: {fileID: 1838093638}
-  - component: {fileID: 1838093637}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1346,33 +1350,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1838093637
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1838093631}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1838093638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1838093631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a751a0a87f486047bf587be0e41a33d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 0
 --- !u!1 &2026851174
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,7 +1382,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d70d444137716ff42b40e06bf0bfd4cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScoreAmount: 1
+  ScoreAmount: 2
+  ScoreManager: {fileID: 0}
 --- !u!135 &2026851176
 SphereCollider:
   m_ObjectHideFlags: 0
