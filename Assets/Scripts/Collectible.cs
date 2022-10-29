@@ -7,19 +7,20 @@ public class Collectible : MonoBehaviour
 {
     public int ScoreAmount = 1;
     public Score ScoreManager;
+    public AudioSource audioSource;
 
     private void Awake()
     {
         ScoreManager = GameObject.Find("Score").GetComponent<Score>();
-        Debug.Log(ScoreManager);
+        
     }
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other);
         if(other.name=="Player")
         {
             ScoreManager.AddScore(ScoreAmount);
+            audioSource.Play();
             Destroy(gameObject);
         }
       
