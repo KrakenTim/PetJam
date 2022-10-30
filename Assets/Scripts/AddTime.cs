@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AddTime : MonoBehaviour
 {
@@ -9,13 +10,13 @@ public class AddTime : MonoBehaviour
     
     void Start()
     {
-
+        PlayerHP = GameObject.Find("PlayerFischi").GetComponent<PlayerHealth>();
     }
 
     // Update is called once per frame
     void OnTriggerEnter(Collider other)
     {
-        if(other.name=="Player")
+        if(other.tag == "Player")
         {
             PlayerHP.AddHealth(TimeAdded);
             Destroy(gameObject);
