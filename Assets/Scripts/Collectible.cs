@@ -35,6 +35,7 @@ public class Collectible : MonoBehaviour
             ScoreManager.AddScore(ScoreAmount);
             audioSource.Play();
             particles.Play();
+            Debug.Log(particles.isPlaying);
             StartCoroutine("SpawnAfterLifetime");
         }
       
