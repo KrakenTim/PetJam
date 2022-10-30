@@ -2,41 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameEnding : MonoBehaviour
 {
-    public PlayerHealth PlayerTime;
 
     public float fadeDuration = 1f;
     public float displayImageDuration = 1f;
-    public GameObject player;
-    public CanvasGroup exitBackgroundImageCanvasGroup;
+    [SerializeField] private float delay = 1.5f;
+    public Image exitBackgroundImageCanvasGroup;
 
-    bool PlayerhasnoHealth;
     float m_Timer;
 
-    
-    void Update()
+    void Awake()
     {
-        if (PlayerTime.currentHealth<1)
-        {
-            PlayerhasnoHealth = true;
-        }
-        if (PlayerhasnoHealth)
-        {
-            EndLevel();
-        }
+        exitBackgroundImageCanvasGroup.enabled = false;
     }
 
-    void EndLevel()
+    public void EndLevel()
     {
+        exitBackgroundImageCanvasGroup.enabled = true;
         m_Timer += Time.deltaTime;
 
-        exitBackgroundImageCanvasGroup.alpha = m_Timer / fadeDuration;
+        exitBackgroundImageCanvasGroup.CrossFadeAlpha(m_Timer, displayImageDuration, true);
+        //= m_Timer / fadeDuration;
 
         if (m_Timer > fadeDuration + displayImageDuration)
         {
-            SceneManager.LoadScene("MainMenu"); 
+            StartCoroutine("DelaySceneTransition");
         }
+    }
+
+    private IEnumerator DelaySceneTransition()
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene("MainMenu");
+        yield return null;
     }
 }

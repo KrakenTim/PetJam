@@ -96,7 +96,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 60
+  lifeDropRate: 1
   currentHealth: 0
+  ending: {fileID: 0}
 --- !u!1001 &37237288286323873
 PrefabInstance:
   m_ObjectHideFlags: 0
