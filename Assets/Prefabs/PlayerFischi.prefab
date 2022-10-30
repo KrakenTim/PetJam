@@ -63,7 +63,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 64
   m_CollisionDetection: 0
 --- !u!114 &4642157330917973560
 MonoBehaviour:
@@ -77,8 +77,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8382e8a118d13dd419c6bc3db9597f82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swimmingSpeed: 50
-  turnSpeed: 60
+  swimmingSpeed: 200
+  turnSpeed: 400
+  baseRotation: {x: 0, y: 0, z: 0}
+  speed: 30
 --- !u!1001 &4642157330466271868
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -92,27 +94,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bab3694553fcf5c41a41d4b8b0d8a555, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bab3694553fcf5c41a41d4b8b0d8a555, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bab3694553fcf5c41a41d4b8b0d8a555, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bab3694553fcf5c41a41d4b8b0d8a555, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.1128573
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bab3694553fcf5c41a41d4b8b0d8a555, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5487068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bab3694553fcf5c41a41d4b8b0d8a555, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.9880085
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bab3694553fcf5c41a41d4b8b0d8a555, type: 3}
       propertyPath: m_LocalRotation.w

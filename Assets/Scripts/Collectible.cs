@@ -12,7 +12,8 @@ public class Collectible : MonoBehaviour
     private void Awake()
     {
         ScoreManager = GameObject.Find("Score").GetComponent<Score>();
-        
+        audioSource = GetComponent<AudioSource>();
+
     }
 
     void OnTriggerEnter(Collider other)
@@ -21,6 +22,7 @@ public class Collectible : MonoBehaviour
         {
             ScoreManager.AddScore(ScoreAmount);
             audioSource.Play();
+            //TODO: Add VFX here
             Destroy(gameObject);
         }
       
