@@ -6,6 +6,7 @@ public class MovementFish : MonoBehaviour
 {
     [SerializeField] float swimmingSpeed = 50f;
     [SerializeField] float turnSpeed = 60f;
+    [SerializeField] Vector3 baseRotation = new Vector3(0, 0, 0);
 
     Transform fishTransform;
 
@@ -13,9 +14,14 @@ public class MovementFish : MonoBehaviour
 
     Vector3 testturn;
 
+    Quaternion desiredRotation;
+    [SerializeField] float speed; //in degrees
+
+
     private void Awake()
     {
         fishTransform = transform;
+        desiredRotation = transform.rotation;
         rb = GetComponent<Rigidbody>();
     }
 
@@ -25,14 +31,30 @@ public class MovementFish : MonoBehaviour
         //Turn();
     }
 
-    void Turn()
+    private void LateUpdate()
     {
-        float yaw = turnSpeed * Time.deltaTime * Input.GetAxis("Horizontal");
-        float pitch = turnSpeed * Time.deltaTime * Input.GetAxis("Pitch");
-        float roll = turnSpeed * Time.deltaTime * Input.GetAxis("Roll");
-        fishTransform.Rotate(-pitch, yaw, -roll);
+        rb.MoveRotation(Quaternion.RotateTowards(rb.rotation, desiredRotation, speed * Time.deltaTime));
+        //RotateZAxes();
     }
 
+    void RotateZAxes()
+    {
+        Vector3 to = new Vector3(fishTransform.eulerAngles.x, fishTransform.eulerAngles.y, baseRotation.z);
+        Debug.Log(Vector3.Distance(transform.eulerAngles, to));
+        float distance = Vector3.Distance(transform.eulerAngles, to);
+        if (distance > 0.01f)
+        {
+        //fishTransform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles, to, Time.deltaTime);
+        }
+        else if (-distance > -0.01f)
+        {
+        //fishTransform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles, to, Time.deltaTime);
+        }
+        //else
+        //{
+        //    fishTransform.eulerAngles = to;
+        //}
+    }
     void Thrust()
     {
         //fishTransform.position += fishTransform.forward * swimmingSpeed * Time.deltaTime * Input.GetAxis("Vertical");
@@ -43,7 +65,14 @@ public class MovementFish : MonoBehaviour
         {
             rb.AddForce(transform.forward * swimmingSpeed * Time.deltaTime);
         }
- 
+    }
+
+    void Turn()
+    {
+        float yaw = turnSpeed * Time.deltaTime * Input.GetAxis("Horizontal");
+        float pitch = turnSpeed * Time.deltaTime * Input.GetAxis("Pitch");
+        float roll = turnSpeed * Time.deltaTime * Input.GetAxis("Roll");
+        fishTransform.Rotate(-pitch, yaw, -roll);
     }
 }
 
