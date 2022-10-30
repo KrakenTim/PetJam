@@ -11,6 +11,7 @@ public class Collectible : MonoBehaviour
     [SerializeField] private float maximumSpawnDuration;
     private SphereCollider collider;
     private MeshRenderer model;
+    private ParticleSystem particles;
 
     private void Awake()
     {
@@ -18,6 +19,7 @@ public class Collectible : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         collider = GetComponent<SphereCollider>();
         model = GetComponent<MeshRenderer>();
+        particles = GetComponent<ParticleSystem>();
     }
 
     void ToggleVisibility()
@@ -32,7 +34,7 @@ public class Collectible : MonoBehaviour
         {
             ScoreManager.AddScore(ScoreAmount);
             audioSource.Play();
-            //TODO: Add VFX here
+            particles.Play();
             StartCoroutine("SpawnAfterLifetime");
         }
       
