@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MovementFish : MonoBehaviour
 {
@@ -25,10 +28,19 @@ public class MovementFish : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    private void Start()
+    {
+        Cursor.visible = false;
+    }
+
     void Update()
     {
         Thrust();
         //Turn();
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 
     private void LateUpdate()

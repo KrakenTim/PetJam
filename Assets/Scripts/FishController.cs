@@ -1,8 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Mathematics;
-using Unity.VisualScripting;
-using UnityEditor.UIElements;
 using UnityEngine;
 
 public class FishController : MonoBehaviour
