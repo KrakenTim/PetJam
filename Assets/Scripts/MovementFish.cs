@@ -60,6 +60,7 @@ public class MovementFish : MonoBehaviour
         //fishTransform.position += fishTransform.forward * swimmingSpeed * Time.deltaTime * Input.GetAxis("Vertical");
         //rb.AddTorque(new Vector3(turnSpeed * Time.deltaTime * Input.GetAxis("Vertical"), turnSpeed * Time.deltaTime * Input.GetAxis("Horizontal"), 0));
         rb.AddTorque(transform.right * Time.deltaTime * Input.GetAxis("Vertical") * turnSpeed);
+        Debug.Log(Input.GetAxis("Horizontal"));
         rb.AddTorque(transform.up * Time.deltaTime * Input.GetAxis("Horizontal") * turnSpeed);
         if (Input.GetButton("Jump"))
         {
