@@ -21,6 +21,7 @@ public class Collectible : MonoBehaviour
         {
             ScoreManager.AddScore(ScoreAmount);
             audioSource.Play();
+            //TODO: Add VFX here
             Destroy(gameObject);
         }
       
