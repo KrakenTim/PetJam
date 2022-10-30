@@ -19,4 +19,14 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= 1f * Time.deltaTime;
         UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
     }
+
+    public void AddHealth(float healthAdded)
+    {
+        currentHealth += healthAdded;
+        if(currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+    }
+    
 }
