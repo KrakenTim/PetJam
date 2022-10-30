@@ -748,6 +748,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1634998145256575598, guid: e0f2212399e1f404c8a9cb81a2770047, type: 3}
+      propertyPath: ending
+      value: 
+      objectReference: {fileID: 1854474607}
+    - target: {fileID: 1634998145256575598, guid: e0f2212399e1f404c8a9cb81a2770047, type: 3}
+      propertyPath: lifeDropRate
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4642157330917973559, guid: e0f2212399e1f404c8a9cb81a2770047, type: 3}
       propertyPath: m_Name
       value: PlayerFischi
@@ -934,6 +942,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4642157330917973563, guid: e0f2212399e1f404c8a9cb81a2770047, type: 3}
   m_PrefabInstance: {fileID: 1550070280}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1854474607 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3486163569079609867, guid: c888c25ec1d5b8443abbc863b4761512, type: 3}
+  m_PrefabInstance: {fileID: 4609334015167926148}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 160dad4c386ce0047a4af56c912352d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1056746118746866595
 PrefabInstance:
   m_ObjectHideFlags: 0

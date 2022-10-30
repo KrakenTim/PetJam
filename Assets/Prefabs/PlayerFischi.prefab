@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1634998145256575598}
   m_Layer: 0
   m_Name: PlayerFischi
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,10 +79,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8382e8a118d13dd419c6bc3db9597f82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swimmingSpeed: 800
-  turnSpeed: 1200
+  swimmingSpeed: 1200
+  turnSpeed: 1000
   baseRotation: {x: 0, y: 0, z: 0}
-  speed: 8
+  speed: 18
 --- !u!114 &1634998145256575598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,7 +96,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 60
+  lifeDropRate: 1
   currentHealth: 0
+  ending: {fileID: 0}
 --- !u!1001 &37237288286323873
 PrefabInstance:
   m_ObjectHideFlags: 0
