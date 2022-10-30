@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MovementFish : MonoBehaviour
 {
-    [SerializeField] float swimmingSpeed = 50f;
-    [SerializeField] float turnSpeed = 60f;
+    [SerializeField] float swimmingSpeed = 200f;
+    [SerializeField] float turnSpeed = 40f;
     [SerializeField] Vector3 baseRotation = new Vector3(0, 0, 0);
 
     Transform fishTransform;
@@ -15,7 +15,7 @@ public class MovementFish : MonoBehaviour
     Vector3 testturn;
 
     Quaternion desiredRotation;
-    [SerializeField] float speed; //in degrees
+    [SerializeField] float speed = 30f; //in degrees
 
 
     private void Awake()
