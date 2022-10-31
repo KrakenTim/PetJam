@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 4642157330917973563}
   - component: {fileID: 4642157330917973562}
   - component: {fileID: 4642157330917973561}
+  - component: {fileID: 8285060989490722134}
   - component: {fileID: 4642157330917973560}
   - component: {fileID: 1634998145256575598}
-  - component: {fileID: 1799112934}
+  - component: {fileID: 1799112935}
   m_Layer: 0
   m_Name: PlayerFischi
   m_TagString: Player
@@ -68,6 +69,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 64
   m_CollisionDetection: 0
+--- !u!114 &8285060989490722134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4642157330917973559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06bb455020cecd2418db420453e8510f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1799112935}
 --- !u!114 &4642157330917973560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,7 +97,7 @@ MonoBehaviour:
   swimmingSpeed: 1200
   turnSpeed: 1000
   baseRotation: {x: 0, y: 0, z: 0}
-  speed: 18
+  speed: 30
 --- !u!114 &1634998145256575598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,7 +114,7 @@ MonoBehaviour:
   lifeDropRate: 2
   currentHealth: 0
   ending: {fileID: 0}
---- !u!82 &1799112934
+--- !u!82 &1799112935
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,8 +124,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0579f1de608c936438c9926e64c6c678, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 15b613fb58cae484ea28f7a9fdeaf885, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
