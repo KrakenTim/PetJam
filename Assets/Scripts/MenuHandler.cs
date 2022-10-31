@@ -79,4 +79,9 @@ public class MenuHandler : MonoBehaviour
     {
         Screen.fullScreen = isFullscreen;
     }
+
+    public void QuitSettings()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }
